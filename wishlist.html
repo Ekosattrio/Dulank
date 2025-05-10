@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percetakan Dulank - Online Printing Shop</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Category Navbar -->
+    <div class="category-navbar py-3 bg-light">
+        <div class="container mt-3">
+            <h1>Wishlist</h1>
+            <p>Home > Wishlist</p>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Main Content Area (placeholder) -->
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table wishlist-table">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="ps-4">Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Wishlist Item 1 -->
+                                <tr class="wishlist-item">
+                                    <td>
+                                        <div class="d-flex align-items-center ps-3">
+                                            <div class="wishlist-item-img me-3">
+                                                <img src="images/kaos.jpg" alt="Retro Cat-Eye Sunglasses" class="img-fluid">
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title mb-1">Kaos Anime <span class="in-stock">(In stock)</span></h5>
+                                                <div class="wishlist-item-vendor">Fashion & Textile</div>
+                                                <div class="wishlist-item-sku">SKU: BS-153-A1</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wishlist-item-price">Rp150.000</div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity-selector">
+                                            <button class="quantity-btn quantity-minus">−</button>
+                                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                            <button class="quantity-btn quantity-plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wishlist-item-actions">
+                                            <button class="btn btn-primary btn-add-to-cart mb-2">Add To Cart</button>
+                                            <button class="btn btn-remove-wishlist">
+                                                <i class="fas fa-times"></i> Remove
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                    
+                                <!-- Wishlist Item 2 -->
+                                <tr class="wishlist-item">
+                                    <td>
+                                        <div class="d-flex align-items-center ps-3">
+                                            <div class="wishlist-item-img me-3">
+                                                <img src="images/yasin.jpg" alt="Faux Fur Trimmed Coat" class="img-fluid">
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title mb-1">Buku Yasin<span class="in-stock">(In stock)</span></h5>
+                                                <div class="wishlist-item-vendor">Uncategorized</div>
+                                                <div class="wishlist-item-sku">SKU: 8Y-118-A1</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wishlist-item-price">Rp50.000</div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity-selector">
+                                            <button class="quantity-btn quantity-minus">−</button>
+                                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                            <button class="quantity-btn quantity-plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wishlist-item-actions">
+                                            <button class="btn btn-primary btn-add-to-cart mb-2">Add To Cart</button>
+                                            <button class="btn btn-remove-wishlist">
+                                                <i class="fas fa-times"></i> Remove
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Empty Wishlist State (hidden by default) -->
+                    <div class="empty-wishlist-container d-none text-center py-5">
+                        <i class="far fa-heart empty-wishlist-icon fa-4x text-muted mb-4"></i>
+                        <h4>Your wishlist is empty</h4>
+                        <p class="text-muted mb-4">You don't have any products added to wishlist yet.</p>
+                        <a href="#" class="btn btn-danger my-bg-primary px-4 py-2 rounded-0">Continue Shopping</a>
+                    </div>
+                    
+                    <!-- Share Wishlist Section -->
+                    <div class="mt-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart me-2"></i> Go To Cart
+                                </a>
+                            </div>
+                            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                <span class="me-2">Share:</span>
+                                <a href="#" class="social-share-icon me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-share-icon me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-share-icon me-2"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="social-share-icon me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-share-icon me-2"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="social-share-icon"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/component.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/loadComponent.js"></script>
+</body>
+</html>

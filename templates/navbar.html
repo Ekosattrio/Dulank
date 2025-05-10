@@ -1,0 +1,77 @@
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+            <div class="logo d-flex align-items-center">
+                <div class="logo-text fw-bold">Dulank.</div>
+            </div>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDulank" aria-controls="navbarDulank" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarDulank">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="#">All Product</a></li>
+                        <li><a class="dropdown-item" href="#">Category</a></li>
+                        <li><a class="dropdown-item" href="#">Brosur</a></li>
+                        <li><a class="dropdown-item" href="#">Kalender</a></li>
+                        <li><a class="dropdown-item" href="#">Buku</a></li>
+                        <li><a class="dropdown-item" href="#">Nota</a></li>
+                        <li><a class="dropdown-item" href="#">Cheksheet</a></li>
+                        <li><a class="dropdown-item" href="#">Amplom</a></li>
+                        <li><a class="dropdown-item" href="#">Yasin</a></li>
+                        <li><a class="dropdown-item" href="#">Sticker</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/orders.html">Track Orders</a>
+                </li>
+            </ul>
+
+            <!-- Search and Action Icons -->
+            <div class="d-flex align-items-center">
+                <div class="search-form me-3">
+                    <form class="d-flex">
+                        <input class="form-control"  placeholder="Search for Products..." aria-label="Search">
+                        <button class="btn search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="action-icons d-flex">
+                    <a href="wishlist.html" class="icon-link me-3 link">
+                        <span class="position-relative fs-5">
+                            <i class="far fa-heart"></i>
+                            <span class="badge rounded-pill icon-badge">2</span>
+                        </span>
+                    </a>
+                    <a href="#" class="icon-link me-3" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+                        <span class="position-relative fs-5">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge rounded-pill icon-badge">2</span>
+                        </span>
+                    </a>
+                    <a href="profile.html" class="icon-link fs-5">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

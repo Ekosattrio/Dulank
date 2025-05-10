@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome/flaticon for icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styleproduklist.css">
+
+    
+</head>
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+      
+      <div class="category-navbar-pl py-3 bg-light" id="navigasi">
+        <div class="container mt-5"     >
+            <h1>Products</h1>
+            <p >Home > Products </p>
+        </div>
+
+      </div>
+
+      <!-- slider -->
+      <div class="container">
+        <div class="slider mt-5 mb-5">
+          <div class="carousel-wrapper">
+            <!-- Tombol di luar container carousel -->
+            <button id="prev" class="nav-button">&#10094;</button>
+      
+            <div class="carousel-container">
+              <div class="carousel" id="carousel">
+                <div class="itemz"><img src="/images/brandit.png" alt="" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <div class="itemz"><img src="/images/brandit.png" alt="Brandit" /></div>
+                <!-- dst... -->
+              </div>
+            </div>
+      
+            <button id="next" class="nav-button">&#10095;</button>
+          </div>
+        
+      </div>
+      </div>
+      
+      
+      <!--slider  -->
+
+
+      <!-- card category -->
+      <div class="category-container">
+        <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/kaos.jpg" alt="Bags">
+          </div>
+          <h6 class="text-standard">Bags</h6>
+            <ul>
+            <li>Dresses</li>
+            <li>Blouses</li>
+            <li>Pants</li>
+          </ul>
+        </div>
+      
+        <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/yasin.jpg" alt="Bags">
+          </div>
+          <h6 >Bags</h6>
+          <ul>
+            <li>Dresses</li>
+            <li>Blouses</li>
+            <li>Pants</li>
+          </ul>
+
+        </div>
+      
+        <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/placeholder.png" alt="Bags">
+          </div>
+          <h6 >Bags</h6>
+          <ul>
+            <li>Dresses</li>
+            <li>Blouses</li>
+            <li>Pants</li>
+          </ul>
+        </div>
+      
+        <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/placeholder.png" alt="Bags">
+          </div>
+          <h6 >Bags</h6>
+          <h6>Women’s Clothing</h6>
+
+        </div>
+      
+        <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/placeholder.png" alt="Bags">
+          </div>
+          <h6 >Bags</h6>
+          <h6>Women’s Clothing</h6>
+
+        </div>
+      <div class="category-card">
+          <div class="categoryimg">
+            <img src="images/placeholder.png" alt="Bags">
+          </div>
+          <h6 >Bags</h6>
+          <h6>Women’s Clothing</h6>
+
+        </div>
+        
+      
+      
+
+      </div>
+      
+      <!-- card category -->
+      
+<!-- searchbar -->
+<div class="container my-5">
+  <!-- Baris Atas: Search + Grid Toggle + Filter -->
+  <div class="row mb-3 align-items-center gy-2">
+    <!-- Kiri: Search -->
+    <div class="col-12 col-md-3">
+      <div class="search-wrapper w-100">
+        <input type="text" class="search-input" placeholder="Search...">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      </div>
+
+    </div>
+  
+    <!-- Tengah: Grid Toggle + Info + Sidebar Button -->
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-between gap-2">
+      <div class="d-flex gap-2 align-items-center">
+        <!-- Tombol toggle grid -->
+        
+        <span class="text-nowrap">44 products Found</span>
+      </div>
+  
+      <!-- Tombol sidebar (baru) -->
+      <button class="btn btn-outline-primary d-md-none" id="toggleSidebar" title="Toggle Sidebar">
+        <i class="fas fa-sliders-h"></i>
+      </button>
+    </div>
+  
+    <!-- Kanan: Filter -->
+    <div class="col-12 col-md-3 text-md-end">
+  <div class="row gx-2">
+    <!-- Filter kiri -->
+    <div class="col-6">
+      <select class="form-select">
+        <option selected>Default</option>
+        <option>Popular</option>
+        <option>Rating</option>
+      </select>
+    </div>
+    <!-- Filter kanan -->
+    <div class="col-6">
+      <select class="form-select">
+        <option>24</option>
+        <option>48</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+  <!-- Sidebar + Produk Grid -->
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <div class="kategori mb-4">
+        <h5>Categories</h5>
+        <ul class="list-unstyled">
+          <li><i class="fa-regular fa-folder"></i> Bags</li>
+          <li><i class="fa-regular fa-folder"></i> Clothing</li>
+          <li><i class="fa-regular fa-folder"></i> Footwear</li>
+          <li><i class="fa-regular fa-folder"></i> Accessories</li>
+          <li><i class="fa-regular fa-folder"></i> Sportswear</li>
+          <li><i class="fa-regular fa-folder"></i> Outerwear</li>
+        </ul>
+      </div>
+      <div class="brands mb-3">
+        <h5>Brands</h5>
+        <ul class="list-unstyled">
+          <li><input type="checkbox" class="form-check-input me-2">FoodPound</li>
+          <li><input type="checkbox" class="form-check-input me-2">iTea JSC</li>
+          <li><input type="checkbox" class="form-check-input me-2">Soda Brand</li>
+          <li><input type="checkbox" class="form-check-input me-2">Shofy</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Produk Grid -->
+    <div class="col-md-9">
+      <div id="productGrid" class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Contoh Produk -->
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/placeholder.png" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hedden card tinggi-custom" >
+            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
+            <div class="card-body">
+              <p class="text-muted">Old El Paso</p>
+              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+              <p class="fw-bold">$149.00</p>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Produk lainnya ... -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIDEBAR & PRODUK -->
+
+    </main>
+
+
+
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <!-- script Produk List -->
+
+     <!-- button slider -->
+     <script>
+      const carousel = document.getElementById('carousel');
+      const next = document.getElementById('next');
+      const prev = document.getElementById('prev');
+    
+      function getScrollAmount() {
+        const item = document.querySelector('.itemz');
+        const style = getComputedStyle(item);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        return item.offsetWidth + marginRight;
+      }
+    
+      next.addEventListener('click', () => {
+        carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+    
+      prev.addEventListener('click', () => {
+        carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+    </script>
+    
+    
+     <!-- button slider -->
+
+     <!-- produk grid -->
+     <script>
+      document.getElementById('toggleGrid').addEventListener('click', function () {
+        const productGrid = document.getElementById('productGrid');
+        const icon = document.getElementById('toggleIcon');
+    
+        productGrid.classList.toggle('horizontal-layout');
+    
+        if (productGrid.classList.contains('horizontal-layout')) {
+          icon.className = 'fas fa-list'; 
+        } else {
+          icon.className = 'fas fa-th-large'; 
+        }
+      });
+    </script>
+     <!-- produk grid -->
+ 
+    <!-- script Produk List -->
+    <script src="js/component.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/loadComponent.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f58b597810.js" crossorigin="anonymous"></script>
+</body>
+</html>

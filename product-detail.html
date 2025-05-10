@@ -1,0 +1,622 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak Brosur Full Color</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .selected{
+        border: 1px solid var(--primary-color) !important;
+      }
+      .section-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(28,44,71,0.06);
+        border: 1px solid var(--border-color);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+      .sorting-nav h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 2rem;
+        color: #b0b4bb;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .sorting-nav h4.active {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+      .image-slider {
+        background: var(--border-color);
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 2rem;
+        color: #bcbcbc;
+        font-size: 2.5rem;
+      }
+      .table-primary{
+        font-weight: bold;
+      }
+      #hargaTable td{
+        font-size: 0.9rem;
+      }
+      .custom-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+      }
+      #specForm .btn{
+        border: 1px solid #dfdfdf;
+        font-size: 0.8rem;
+        margin: 3px 0;
+        border-radius: 0;
+      }
+      #specForm .btn:hover{
+        border: 1px solid var(--primary-color);
+      }
+      .table-striped>tbody>tr:nth-of-type(odd){
+        --bs-table-bg-type: #f3f3f7;
+      }
+      .tablink {
+        color: var(--primary-color)!important;
+      }
+      .nav-tabs .nav-link.active {
+        border-color: var(--primary-color) var(--primary-color) #fff;
+        color: var(--primary-color);
+      }
+      .nav-tabs .nav-link {
+        color: var(--secondary-color);
+        font-weight: 500;
+      }
+      .category-tab {
+        border-bottom: 1.5px solid var(--border-color);
+      }
+      /* Design Cards */
+      .design-card {
+        border-radius: 10px;
+        background: #fafbfe;
+        text-align: center;
+      }
+      .design-img {
+        width: 100%;
+        min-height: 140px;
+        margin-bottom: 0.5rem;
+      }
+      /* Panduan Design Table */
+      .download-icon {
+        color: var(--primary-color);
+        margin-right: 0.5em;
+      }
+      .faq-section {
+        background: #f6f8fa;
+        padding: 1.2rem 1.5rem;
+        border-radius: 10px;
+        color: var(--text-color);
+      }
+      /* Responsive Tweaks */
+      @media (max-width:991px) {
+        .flex-lg-row {
+          flex-direction: column!important;
+        }
+      }
+      @media (max-width: 540px) {
+        .section-card {
+          padding: 1rem;
+        }
+        .image-slider { height: 140px; }
+        .design-img { height: 70px; }
+      }
+      
+      .collapse {
+          &:not(.show) {
+              display: none;
+          }
+      }
+
+      .collapsing {
+          height: 0;
+          overflow: hidden;
+          @include transition($transition-collapse);
+
+          &.collapse-horizontal {
+              width: 0;
+              height: auto;
+              @include transition($transition-collapse-width);
+          }
+      }
+
+      .accordion-button{
+          font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Category Navbar -->
+    <div class="category-navbar py-3 bg-light">
+      <div class="container mt-3">
+          <h1>Cetak Brosur Full Color</h1>
+          <p>Home > Products > Brosur</p>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc mauris, mattis eget libero ut, finibus pellentesque lectus. Etiam pulvinar ipsum vel sagittis facilisis. Suspendisse non porta purus. Proin ut lobortis sapien, in ultricies dui. Donec lectus mauris, dignissim vel facilisis id.</p>
+      </div>
+    </div>
+    
+    <main>
+        <!-- Main Content Area (placeholder) -->
+        <div class="container mb-5 mt-3">
+            <div class="row">
+                <div class="col-12">
+                  <!-- Header & Sorting -->
+                  <div class="sorting-nav mb-4">
+                    <h4 class="fs-6">Paling Hemat</h4>
+                    <h4 class="active text-decoration-none">Brosur Spesifikasi Standar</h4>
+                    <h4 class="fs-6">Plyer Manual</h4>
+                    <h4 class="fs-6">Flyer Exclusive</h4>
+                  </div>
+                  <!-- Main Content -->
+                  <div class="section-card p-4">
+                    <div class="row flex-lg-row">
+                      <!-- Kiri: Form-->
+                      <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h3 class="fs-5 mb-3">Tentukan Spesifikasi</h3>
+                        <form id="specForm">
+                          <div class="mb-3">
+                            <div class="row">
+                              <div class="col-3">
+                                <label class="custom-label">Qty Pesanan (Rim)</label>
+                              </div>
+                              <div class="col-9 pe-4" id="qty">
+                                <input type="text" class="form-control rounded-0 bg-white" placeholder="Enter your quantity">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <div class="row">
+                              <div class="col-3">
+                                <label class="custom-label">Ukuran Brosur</label>
+                              </div>
+                              <div class="col-9">
+                                <div id="size" class="d-inline">
+                                  <input class="btn" type="button" data-price="50000" value="A4 (210x297mm)">
+                                  <input class="btn" type="button" data-price="35000" value="A5 (148x210mm)">
+                                  <input class="btn" type="button" data-price="90000" value="A3 (297x420mm)">
+                                </div>
+                                <div class="d-flex d-none" id="custom-size">
+                                  <input type="text" class="form-control rounded-0 me-2" placeholder="Width">
+                                  <input type="text" class="form-control rounded-0 me-2" placeholder="Height">
+                                  <select class="form-select w-auto rounded-0" aria-label="Default select example"> 
+                                    <option value="cm">cm</option>
+                                    <option value="mm">mm</option>
+                                    <option value="in">in</option>
+                                  </select>
+                                </div>
+                                <input type="button" class="btn custom-size-btn d-md-inline d-block" value="Custom"><br>
+                                <small class="text-muted d-none" id="info-custom"><i class="fa-solid fa-circle-info"></i> Ukuran dan jenis kertas tertentu melebihi pilihan bisa konsultasi.</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <div class="row">
+                              <div class="col-3">
+                                <label class="custom-label">Jenis Bahan Kertas</label>
+                              </div>
+                              <div class="col-9" id="type">
+                                <input class="btn" type="button" value="Art paper 150gr" data-price="12000">
+                                <input class="btn" type="button" value="Art paper 120gr" data-price="8000">
+                                <input class="btn" type="button" value="HVS 100gr" data-price="5000">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <div class="row">
+                              <div class="col-3">
+                                <label class="custom-label">Sisi Cetak</label>
+                              </div>
+                              <div class="col-9" id="side">
+                                <input class="btn" type="button" value="Cetak 1 Sisi" data-price="0">
+                                <input class="btn" type="button" value="Cetak 2 Sisi" data-price="8000">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <div class="row">
+                              <div class="col-3">
+                                <label class="custom-label">Warna Tinta</label>
+                              </div>
+                              <div class="col-9" id="color">
+                                <input class="btn" type="button" value="1 Warna" data-price="3000">
+                                <input class="btn" type="button" value="2 Warna" data-price="5000">
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn my-btn-primary w-100" type="button" id="btnHitung">Hitung Harga</button>
+                        </form>
+                      </div>
+                      <!-- Kanan: Gambar, Harga & Ongkir -->
+                      <div class="col-lg-6">
+                        <div class="d-flex justify-content-between align-items-end mb-2">
+                          <h3 class="mb-1 fs-6">List Harga</h3>
+                          <div>
+                            <a href="#" class="text-decoration-none me-2"><i class="fa-brands fs-4 fa-square-whatsapp text-success"></i></a>
+                            <a href="#" class="text-decoration-none me-2"><i class="fa-brands fs-4 fa-facebook text-primary"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-md-10 px-3 order-md-2">
+                            <div class="my-3 ratio ratio-4x3">
+                              <img src="/images/brosur.jpg" class="object-fit-cover img-product">
+                            </div>
+                          </div>
+                          <div class="col-md-2 text-center order-md-1">
+                            <img role="button" src="/images/brosur.jpg" class="object-fit-cover border border-2 border-primary my-1 img-variant" width="80">
+                            <img role="button" src="/images/brosur.jpg" class="object-fit-cover border border-2 my-1 img-variant" width="80">
+                            <img role="button" src="/images/brosur.jpg" class="object-fit-cover border border-2 my-1 img-variant" width="80">
+                          </div>
+                        </div>
+                        <div class="mb-3 mt-2">
+                          <p id="result">Brosur Full Color A4 (210x297mm), Art paper 150gr, Cetak 2 sisi, Tanpa laminasi, tanpa Lipat</p>
+                        </div>
+                        <div class="table-responsive my-3">
+                          <table class="table table-hover table-striped align-middle text-center mb-0" id="hargaTable">
+                            <thead style="background:#f8f9fa;">
+                              <tr>
+                                <th>Qty</th>
+                                <th>Harga Satuan</th>
+                                <th>Sub Total</th>
+                                <th>Berat</th>
+                                <th>Pengerjaan</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- Ini diisi oleh Javascript -->
+                              <tr class="table-primary"><td>10 Rim</td><td>Rp65.000</td><td>Rp2.360.000</td><td>30 Kg</td><td>3 Hari</td></tr>
+                              <tr><td>13 Rim</td><td>Rp64.000</td><td>Rp2.960.000</td><td>38 Kg</td><td>3 Hari</td></tr>
+                              <tr><td>17 Rim</td><td>Rp64.000</td><td>Rp3.360.000</td><td>42 Kg</td><td>3 Hari</td></tr>
+                              <tr><td>20 Rim</td><td>Rp62.000</td><td>Rp3.850.000</td><td>49 Kg</td><td>3 Hari</td></tr>
+                              <tr><td>25 Rim</td><td>Rp60.000</td><td>Rp4.360.000</td><td>55 Kg</td><td>4 Hari</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="row my-2 px-2 align-items-top">
+                          <div class="col-md-12 shadow py-4">
+                            <div class="fw-semibold mb-3"><span>Perkiraan Biaya Pengiriman</span> <span class="text-primary" id="beratLabel">Berat 25 Kg</span></div>
+
+                            <div class="accordion" id="accordionExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Pilihan Pengiriman 
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <form>
+                                      <div class="mb-2">
+                                        <label class="form-label mb-3 me-3"><span>Pilihan Pengiriman:</span></label>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ongkirMode" id="expedisiOpt" value="expedisi" checked>
+                                          <label class="form-check-label" for="expedisiOpt" style="font-size: 0.9rem;">Jasa Paket / Kargo</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ongkirMode" id="ambilSendiriOpt" value="ambil">
+                                          <label class="form-check-label" for="ambilSendiriOpt" style="font-size: 0.9rem;">Ambil Sendiri</label>
+                                        </div>
+                                      </div>
+                                      <div class="g-2">
+                                        <div class="row mb-3">
+                                          <div class="col-md-3">
+                                            <p>Provinsi</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <select class="form-select" id="provinsi">
+                                              <option><span></span>Jawa Tengah</span></option>
+                                              <option><span>DKI Jakarta</span></option>
+                                              <option><span>Jawa Barat</span></option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                          <div class="col-md-3">
+                                            <p>Kota</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <select class="form-select" id="kabupaten">
+                                              <option><span>Klaten</span></option>
+                                              <option><span>Surakarta</span></option>
+                                              <option><span>Semarang</span></option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                          <div class="col-md-3">
+                                            <p>Kecmatan</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <select class="form-select" id="kecamatan">
+                                              <option><span>Kaliadem</span></option>
+                                              <option><span>Manisrenggo</span></option>
+                                              <option><span>Trucuk</span></option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="mt-2">
+                                        <span class="fw-semibold">Perkiraan Biaya Kirim </span>
+                                        <span id="ongkirLabel">Rp 76.250</span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                            <div class="text-end mb-3 mt-2">
+                              <div>Jumlah Total</div>
+                              <div class="fs-3 fw-bold text-primary" id="grandTotal">Rp 0</div>
+                            </div>
+                            <div class="text-end">
+                              <button class="btn me-2"><i class="far fa-heart"></i></button>
+                              <button class="btn me-2 my-btn-outline-primary">Keranjang</button>
+                              <button class="btn me-2 my-btn-primary">Beli Sekarang</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row my-3">
+                          <div role="button" class="col-md-4 text-center p-1">
+                              <div class="card shadow mx-1 my-1 p-4">
+                                  <!-- <i class="fa-solid fa-arrow-up-from-bracket fs-3 mb-2"></i> -->
+                                  <h5 class="fs-6">Upload Design</h5>
+                                  <span>Upload your Print-Ready Design File</span>
+                              </div>
+                          </div>
+                          <div role="button" class="col-md-4 text-center p-1">
+                              <div class="card shadow mx-1 my-1 p-4">
+                                  <!-- <i class="fa-regular fa-image fs-3 mb-2"></i> -->
+                                  <h5 class="fs-6">Browse Design</h5>
+                                  <span>Choose from our Design Collection</span>
+                              </div>
+                          </div>
+                          <div role="button" class="col-md-4 text-center p-1">
+                              <div class="card shadow mx-1 my-1 p-4">
+                                  <!-- <i class="fa-solid fa-pen-to-square fs-3 mb-2"></i> -->
+                                  <h5 class="fs-6">Custom Design</h5>
+                                  <span>Design online in our Design Studio</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- end row -->
+                  </div> <!-- end section-card -->
+                  <!-- Design Brosur Section -->
+                  <h1 class="fs-4 mb-4">Design Brosur Full Color</h1>
+                  <div class="section-card pt-3 pb-4">
+                    <!-- Tabs kategori -->
+                    <ul class="nav nav-tabs category-tab mb-3" id="kategoriTab">
+                      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#kat-all">Semua</a></li>
+                      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#kat-kuliner">Kuliner</a></li>
+                      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#kat-laundry">Laundry</a></li>
+                      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#kat-kursus">Kursus</a></li>
+                      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#kat-otomotif">Otomotif</a></li>
+                    </ul>
+                    <!-- Kartu desain per kategori -->
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="kat-all">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Rumah Makan</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Motor Honda</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Cuci Baju</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Les Bahasa</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Salon</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Mobil Toyota</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                        </div>
+                        <div class="text-end mt-2"><a href="#" class="text-decoration-none">Tampilkan Semua</a></div>
+                      </div>
+                      <!-- 4 kategori tab isi bisa isi ulang image/keterangan sesuai kebutuhan -->
+                      <div class="tab-pane fade" id="kat-kuliner">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Rumah Makan</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="kat-laundry">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Cuci Baju</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="kat-kursus">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Les Bahasa</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="kat-otomotif">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                          <div class="col"><div class="design-card"><img class="design-img" src="https://skala.or.id/wp-content/uploads/2024/01/dummy-post-square-1-1.jpg" /><div>Mobil Toyota</div><button class="btn my-btn-primary my-2 rounded-0">Customize</button></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Panduan Design & FAQ Tabs -->
+                  <div class="section-card pt-2 pb-1">
+                    <ul class="nav nav-tabs mb-4" id="panduanTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="panduan-tab" data-bs-toggle="tab" data-bs-target="#panduan" type="button" role="tab" aria-controls="panduan" aria-selected="true">Panduan Design</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">FAQ</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="panduan" role="tabpanel" aria-labelledby="panduan-tab">
+                        <div class="table-responsive">
+                          <table class="table align-middle mb-0">
+                            <thead>
+                              <tr><th>Download Panduan Design Pdf</th></tr>
+                            </thead>
+                            <tbody>
+                              <tr><td><i class="fa-solid fa-file-pdf download-icon"></i>Brosur Ukuran A4 (210x297mm)</td></tr>
+                              <tr><td><i class="fa-solid fa-file-pdf download-icon"></i>Brosur Ukuran A4 (210x297mm)</td></tr>
+                              <tr><td><i class="fa-solid fa-file-pdf download-icon"></i>Brosur Ukuran A4 (210x297mm)</td></tr>
+                              <tr><td><i class="fa-solid fa-file-pdf download-icon"></i>Brosur Ukuran A4 (210x297mm)</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                        <div class="faq-section">
+                          <span>
+                            <strong>Q: Apakah bisa request ukuran khusus?</strong><br>
+                            A: Bisa, silakan konsultasikan dengan tim kami.
+                            <br><br>
+                            <strong>Q: Berapa lama proses pengerjaan?</strong><br>
+                            A: Estimasi sesuai tabel dan variasi pesanan.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bought Together -->
+                  <h3 class="text-center fw-bold my-3 fs-4">Bought Together</h3>
+                  <div class="row mb-5 g-3">
+                    <div class="col-md-3 col-6">
+                        <div class="card card-product h-100">
+                        <span class="badge badge-new position-absolute m-2">New</span>
+                        <img src="https://percetakan-dulank.com/wp-content/uploads/2023/04/140630376_4088b1f6-664b-4ace-92ae-1b90ca464988_1200_968.jpg" class="card-img-top p-3" style="object-fit:contain;">
+                        <div class="card-body">
+                            <div class="card-product-title">Kop Surat letter head</div>
+                            <div class="product-price fs-6">Rp75.000</div>
+                            <button class="btn my-btn-outline-primary w-100 btn-sm mt-2">Buy now at Rp75.000</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card card-product h-100">
+                        <span class="badge badge-sale position-absolute m-2">Sale</span>
+                        <img src="https://percetakan-dulank.com/wp-content/uploads/2023/04/Kalender-Plakat-Acrilyc-570x570.jpg" class="card-img-top p-3" style="object-fit:contain;">
+                        <div class="card-body">
+                            <div class="card-product-title">Kalender Plakat Acrilyc</div>
+                            <div class="product-price fs-6">Rp262.500</div>
+                            <button class="btn my-btn-outline-primary w-100 btn-sm mt-2">Select Options</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card card-product h-100">
+                        <span class="badge badge-new position-absolute m-2">New</span>
+                        <img src="https://percetakan-dulank.com/wp-content/uploads/2023/08/kn_48.jpg" class="card-img-top p-3" style="object-fit:contain;">
+                        <div class="card-body">
+                            <div class="card-product-title">Kartu Nama</div>
+                            <div class="product-price fs-6">Rp50.000</div>
+                            <button class="btn my-btn-outline-primary w-100 btn-sm mt-2">Select Options</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card card-product h-100">
+                        <span class="badge badge-discount position-absolute m-2">-37%</span>
+                        <img src="https://percetakan-dulank.com/wp-content/uploads/2023/04/Bendera-1-570x570.jpg" class="card-img-top p-3" style="object-fit:contain;">
+                        <div class="card-body">
+                            <div class="card-product-title">Bendera</div>
+                            <div class="product-old-price small">Rp80.000</div>
+                            <div class="product-price fs-6">Rp50.400</div>
+                            <button class="btn my-btn-outline-primary w-100 btn-sm mt-2">Buy now at Rp50.400</button>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const btn_custom_size = document.querySelector('.custom-size-btn')
+      const btn_input = document.querySelectorAll('input');
+      const img_variant = document.querySelectorAll('.img-variant');
+      const result_el = document.querySelector('#result')
+      let result = {
+        'size' : 'A4 (210x297mm)',
+        'type' : 'Art paper 150gr',
+        'side' : 'Cetak 1 sisi',
+        'color' : '1 Warna'
+      }
+      result_el.innerHTML = `Brosur Full Color ${result['size']}, ${result['type']}, ${result['side']}, ${result['color']}`
+
+      btn_input.forEach(btns => {
+        btns.addEventListener('click',()=>{
+          // Delete all selected class from siblings element
+          const siblings = btns.parentElement.childNodes;
+          for (let i = 0; i < siblings.length; i++) {
+            if(siblings[i].nodeName == 'INPUT'){
+              // Set text for result
+              result[btns.parentElement.id] = btns.value
+              result_el.innerHTML = `Brosur Full Color ${result['size']}, ${result['type']}, ${result['side']}, ${result['color']}`
+              siblings[i].classList.remove('selected')
+            }
+          }
+          // Add class to clicked variant
+          btns.classList.toggle('selected')
+        })
+      })
+
+      btn_custom_size.addEventListener('click',() => {
+        let value_btn = btn_custom_size.value == "Custom" ? "Cancel" : "Custom"
+        btn_custom_size.value = value_btn
+        document.querySelector('#size').classList.toggle('d-none')
+        document.querySelector('#info-custom').classList.toggle('d-none')
+        document.querySelector('#custom-size').classList.toggle('d-none')
+      })
+
+      img_variant.forEach(img => {
+        img.addEventListener('click',()=>{
+          const siblings = img.parentElement.childNodes;
+          for (let i = 0; i < siblings.length; i++) {
+            if(siblings[i].nodeName == 'IMG'){
+              // Set text for result
+              siblings[i].classList.remove('border-primary')
+            } 
+          }
+          document.querySelector('.img-product').src = img.src
+          img.classList.toggle('border-primary')
+        })
+      })
+    </script>
+    <!-- Custom JS -->
+    <script src="js/component.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/loadComponent.js"></script>
+    
+</body>
+</html>
+
+

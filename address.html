@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addresses</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+    
+    <main>
+        <!-- Main Content Area (placeholder) -->
+        <div class="container my-5">
+            <div class="row">
+                <!-- Sidebar Navigation -->
+                <div class="col-lg-3 mb-4" id="sidebar-profile-placeholder"></div>
+
+                <!-- Main Profile Content -->
+                <div class="col-lg-9">
+                    <!-- For Empty -->
+                    <div class="text-center py-5 d-none empty">
+                        <img src="images/address.svg" width="150" class="mb-4">
+                        <h4>No addresses here!</h4>
+                        <p class="text-muted mb-4">Add your home</p>
+                        <a href="#" class="btn btn-dark my-bg-primary px-4 py-2 rounded-0" data-bs-toggle="modal" data-bs-target="#addAddressModal">Add a new address</a>
+                    </div>
+
+                    <!-- Add Address Modal -->
+                    <div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title fw-bold" id="addAddressModalLabel">Add new address</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="fullName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="address" class="form-label">Address</label>
+                                            <textarea class="form-control" id="address" rows="3" required></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="city" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="state" class="form-label">State/Province</label>
+                                            <input type="text" class="form-control" id="state" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="zipCode" class="form-label">ZIP/Postal Code</label>
+                                            <input type="text" class="form-control" id="zipCode" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="country" class="form-label">Country</label>
+                                            <select class="form-select" id="country" required>
+                                                <option value="">Select country</option>
+                                                <option value="US">United States</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <!-- Add more countries as needed -->
+                                            </select>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" id="defaultAddress">
+                                            <label class="form-check-label" for="defaultAddress">
+                                                Set as default address
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary" 
+                                            style="background-color: var(--primary-color); border-color: var(--primary-color);">
+                                        Save address
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-content bg-white p-4 rounded-3 shadow-sm">
+                        <!-- Header -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold m-0">Addresses</h4>
+                        </div>
+                    
+                        <!-- Address List -->
+                        <div class="address-list">
+                            <!-- Address Item 1 -->
+                            <div class="address-item border-bottom pb-4 mb-4">
+                                <i class="fas fa-car-side mb-4 fa-2xl"></i>
+                                <h5 class="fw-bold">Ahmad Dhani</h5>
+                                <p class="mb-1"><strong>Phone:</strong> +15205376619</p>
+                                <p class="mb-1"><strong>Email:</strong> ahmaddhani@gmail.com</p>
+                                <p class="mb-3"><strong>Address:</strong> 515 Sarah Shore Suite 828, Port Kennethstad, Iowa, TH</p>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-primary">Edit</a>
+                                    <a href="#" class="text-danger">Remove</a>
+                                </div>
+                            </div>
+                    
+                            <!-- Address Item 2 -->
+                            <div class="address-item border-bottom pb-4 mb-4">
+                                <i class="fas fa-car-side mb-4 fa-2xl"></i>
+                                <h5 class="fw-bold">Once Mekel</h5>
+                                <p class="mb-1"><strong>Phone:</strong> +13475667198</p>
+                                <p class="mb-1"><strong>Email:</strong> oncemekel@gmail.com</p>
+                                <p class="mb-3"><strong>Address:</strong> 674 Joseph Springs, New Hayden, Arizona, PA</p>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-primary">Edit</a>
+                                    <a href="#" class="text-danger">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Add Address Button at Bottom -->
+                        <div class="mt-4">
+                            <button class="btn btn-dark my-bg-primary px-4 py-2 rounded-0" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                Add a new address
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/component.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/loadComponent.js"></script>
+    <script>
+        // Functionality for Edit/Remove buttons
+        const editButtons = document.querySelectorAll('.address-item a.text-primary');
+        const removeButtons = document.querySelectorAll('.address-item a.text-danger');
+        
+        editButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add edit functionality here
+                console.log('Edit address clicked');
+            });
+        });
+        
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Are you sure you want to remove this address?')) {
+                    // Add remove functionality here
+                    this.closest('.address-item').remove();
+                    if(document.querySelectorAll('.address-item').length <= 0){
+                        document.querySelector('.profile-content').classList.toggle("d-none");
+                        document.querySelector('.empty').classList.toggle("d-none");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
