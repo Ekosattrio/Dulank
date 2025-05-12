@@ -1463,14 +1463,7 @@ span, p{
 }
 
 /* category card */
-.category-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px; /* jarak antar card */
-  padding: 20px;
-  background-color: #fff;
-}
+
 
 .category-card {
   width: 150px;
@@ -1650,3 +1643,19 @@ ul.list-unstyled li {
   cursor: pointer;
 }
 
+.product-card {
+      background-color: #111;
+      height: 150px;
+      border-radius: 6px;
+    }
+
+    .blog-card {
+      background-color: #333;
+      max-height: 50px;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    h5 {
+      font-weight: 600;
+    }
