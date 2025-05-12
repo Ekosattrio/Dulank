@@ -1608,7 +1608,80 @@ ul.list-unstyled li {
   flex-direction: row;
   align-items: center;
 }
+/* Produk Card */
+.produk-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
+/* Gambar doang yang nge-zoom */
+.produk-card img {
+  transition: transform 0.4s ease;
+}
+
+.produk-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Action Buttons (keranjang, dll) */
+.produk-card .action-buttons {
+  opacity: 0;
+  transform: translateX(-30px); /* mulai dari kiri */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10;
+}
+
+.produk-card:hover .action-buttons {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tombol */
+.action-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* tambah shadow */
+  box-shadow: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #212529; /* dark */
+  color: white;
+}
+
+.action-btn:hover i {
+  color: white;
+}
+
+/* modal view */
+.product-image {
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.btn-outline-secondary.active {
+  background-color: #212529;
+  color: white;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* modal view */
 .horizontal-layout .card-img-top {
   width: 40%;
   height: auto;
