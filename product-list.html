@@ -211,117 +211,180 @@
   <div class="row">
     <!-- Sidebar -->
     <div class="col-md-3">
-      <div class="kategori mb-4">
-        <h5>Categories</h5>
-        <ul class="list-unstyled">
-          <li><i class="fa-regular fa-folder"></i> Bags</li>
-          <li><i class="fa-regular fa-folder"></i> Clothing</li>
-          <li><i class="fa-regular fa-folder"></i> Footwear</li>
-          <li><i class="fa-regular fa-folder"></i> Accessories</li>
-          <li><i class="fa-regular fa-folder"></i> Sportswear</li>
-          <li><i class="fa-regular fa-folder"></i> Outerwear</li>
-        </ul>
-      </div>
-      <div class="brands mb-3">
-        <h5>Brands</h5>
-        <ul class="list-unstyled">
-          <li><input type="checkbox" class="form-check-input me-2">FoodPound</li>
-          <li><input type="checkbox" class="form-check-input me-2">iTea JSC</li>
-          <li><input type="checkbox" class="form-check-input me-2">Soda Brand</li>
-          <li><input type="checkbox" class="form-check-input me-2">Shofy</li>
-        </ul>
-      </div>
+  <!-- Kategori -->
+  <div class="kategori mb-4">
+    <h5>Categories</h5>
+    <ul class="list-unstyled">
+      <li><i class="fa-regular fa-folder"></i> Bags</li>
+      <li><i class="fa-regular fa-folder"></i> Clothing</li>
+      <li><i class="fa-regular fa-folder"></i> Footwear</li>
+      <li><i class="fa-regular fa-folder"></i> Accessories</li>
+      <li><i class="fa-regular fa-folder"></i> Sportswear</li>
+      <li><i class="fa-regular fa-folder"></i> Outerwear</li>
+    </ul>
+  </div>
+
+  <!-- Brand -->
+  <div class="brands mb-3">
+    <h5>Brands</h5>
+    <ul class="list-unstyled">
+      <li><input type="checkbox" class="form-check-input me-2">FoodPound</li>
+      <li><input type="checkbox" class="form-check-input me-2">iTea JSC</li>
+      <li><input type="checkbox" class="form-check-input me-2">Soda Brand</li>
+      <li><input type="checkbox" class="form-check-input me-2">Shofy</li>
+    </ul>
+  </div>
+
+  <!-- Price Filter -->
+  <div class="kategori mb-4" style="background-color: rgba(240, 240, 240, 0.5); padding: 20px;">
+  <h5>Price</h5>
+  <div class="range-wrapper">
+    <input type="range" id="minRange" min="0" max="2471" value="229" step="1">
+    <input type="range" id="maxRange" min="0" max="2471" value="2471" step="1">
+    <div class="slider-track"></div>
+  </div>
+  <div class="d-flex justify-content-between mt-2">
+    <span id="minPrice">$229.00</span>
+    <span id="maxPrice">$2,471.00</span>
+  </div>
+</div>
+
+
+
+
+  <!-- On Sale -->
+  <div class="kategori mb-4">
+    <h5>On Sale</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="onSale">
+      <label class="form-check-label" for="onSale">
+        Show only discounted products
+      </label>
     </div>
+  </div>
+
+  <!-- Color Filter -->
+<div class="kategori mb-4" style="background-color: rgba(240, 240, 240, 0.5); padding: 20px;">
+  <h5>Color</h5>
+  <ul class="list-unstyled">
+    <li class="d-flex align-items-center mb-2 color-option" data-color="Green">
+      <span class="color-circle me-2" style="background-color:#92d2e8;"></span> Green
+    </li>
+    <li class="d-flex align-items-center mb-2 color-option" data-color="Blue">
+      <span class="color-circle me-2" style="background-color:#333333;"></span> Blue
+    </li>
+    <li class="d-flex align-items-center mb-2 color-option" data-color="Red">
+      <span class="color-circle me-2" style="background-color:#c94c4c;"></span> Red
+    </li>
+    <li class="d-flex align-items-center mb-2 color-option" data-color="Black">
+      <span class="color-circle me-2" style="background-color:#222244;"></span> Black
+    </li>
+    <li class="d-flex align-items-center mb-2 color-option" data-color="Brown">
+      <span class="color-circle me-2" style="background-color:#aa6e3f;"></span> Brown
+    </li>
+  </ul>
+
+
+
+
+  <hr>
+
+  <!-- Weight -->
+  <h5>Weight</h5>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 1KG</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 2KG</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 3KG</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 4KG</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 5KG</div>
+
+  <hr>
+
+  <!-- Size -->
+  <h5>Size</h5>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> S</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> M</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> L</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> XL</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> XXL</div>
+
+  <hr>
+
+  <!-- Boxes -->
+  <h5>Boxes</h5>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 1 Box</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 2 Boxes</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 3 Boxes</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 4 Boxes</div>
+  <div class="form-check"><input class="form-check-input" type="checkbox"> 5 Boxes</div>
+</div>
+
+</div>
+
 
     <!-- Produk Grid -->
     <div class="col-md-9">
-      <div id="productGrid" class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- Contoh Produk -->
-        <div class="col">
-  <div class="card tinggi-custom position-relative produk-card">
-  <!-- Hover Action Buttons -->
-  <div class="action-buttons d-flex flex-column align-items-center position-absolute top-0 start-0 mt-3 ms-2">
-    <button class="btn action-btn mb-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Cart">
-      <i class="bi bi-cart"></i>
-    </button>
-    <button class="btn action-btn mb-2"  data-bs-toggle="modal" data-bs-target="#productModal"data-bs-placement="right" title="Quick View">
-      <i class="bi bi-eye"></i>
-    </button>
-    <button class="btn action-btn mb-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist">
-      <i class="bi bi-heart"></i>
-    </button>
-    <button class="btn action-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Compare">
-      <i class="bi bi-arrow-left-right"></i>
-    </button>
-  </div>
+        <div id="productGrid" class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Contoh Produk -->
+          <div class="col">
+        <div class="card tinggi-custom position-relative produk-card">
+      <!-- Hover Action Buttons -->
+      <div class="action-buttons d-flex flex-column align-items-center position-absolute top-0 start-0 mt-3 ms-2">
+        <button class="btn action-btn mb-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Cart">
+          <i class="bi bi-cart"></i>
+        </button>
+        <button class="btn action-btn mb-2"  data-bs-toggle="modal" data-bs-target="#productModal"data-bs-placement="right" title="Quick View">
+          <i class="bi bi-eye"></i>
+        </button>
+        <button class="btn action-btn mb-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist">
+          <i class="bi bi-heart"></i>
+        </button>
+        <button class="btn action-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Compare">
+          <i class="bi bi-arrow-left-right"></i>
+        </button>
+      </div>
 
-  <!-- Gambar -->
-  <img src="/images/placeholder.png" class="card-img-top object-fit-fill" style="height: 350px;" alt="Produk">
+    <!-- Gambar -->
+    <img src="/images/placeholder.png" class="card-img-top object-fit-fill" style="height: 350px;" alt="Produk">
 
-  <!-- Deskripsi -->
-  <div class="card-body">
-    <p class="text-muted">Old El Paso</p>
-    <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-    <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-    <p class="fw-bold">$149.00</p>
-  </div>
-</div>
+    <!-- Deskripsi -->
+      <div class="card-body">
+        <p class="text-muted">Old El Paso</p>
+        <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
+        <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
+        <p class="fw-bold">$149.00</p>
         </div>
-        <div class="col">
-          <div class="hedden card tinggi-custom" >
-            <img src="/images/placeholder.png" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
-            <div class="card-body">
-              <p class="text-muted">Old El Paso</p>
-              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-              <p class="fw-bold">$149.00</p>
-            </div>
-          </div>
+    </div>
         </div>
-        <div class="col">
-          <div class="hedden card tinggi-custom" >
-            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
-            <div class="card-body">
-              <p class="text-muted">Old El Paso</p>
-              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-              <p class="fw-bold">$149.00</p>
-            </div>
-          </div>
+         <div class="col">
+      <div class="card tinggi-custom position-relative produk-card">
+        <!-- Action buttons, img, body sama seperti di atas -->
+        <!-- Ganti deskripsi produk -->
+        <div class="action-buttons d-flex flex-column align-items-center position-absolute top-0 start-0 mt-3 ms-2">
+          <button class="btn action-btn mb-2" data-bs-toggle="tooltip" title="Add to Cart">
+            <i class="bi bi-cart"></i>
+          </button>
+          <button class="btn action-btn mb-2" data-bs-toggle="modal" data-bs-target="#productModal" title="Quick View">
+            <i class="bi bi-eye"></i>
+          </button>
+          <button class="btn action-btn mb-2" data-bs-toggle="tooltip" title="Add to Wishlist">
+            <i class="bi bi-heart"></i>
+          </button>
+          <button class="btn action-btn" data-bs-toggle="tooltip" title="Compare">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
         </div>
-        <div class="col">
-          <div class="hedden card tinggi-custom" >
-            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
-            <div class="card-body">
-              <p class="text-muted">Old El Paso</p>
-              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-              <p class="fw-bold">$149.00</p>
-            </div>
-          </div>
+        <img src="/images/placeholder.png" class="card-img-top object-fit-fill" style="height: 350px;" alt="Produk">
+        <div class="card-body">
+          <p class="text-muted">Rayban</p>
+          <h6 class="card-title">Classic Aviator</h6>
+          <div class="text-warning mb-2">★★★★★ (15 reviews)</div>
+          <p class="fw-bold">$199.00</p>
         </div>
-        <div class="col">
-          <div class="hedden card tinggi-custom" >
-            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
-            <div class="card-body">
-              <p class="text-muted">Old El Paso</p>
-              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-              <p class="fw-bold">$149.00</p>
-            </div>
-          </div>
+      </div>
+    </div>
+        
         </div>
-        <div class="col">
-          <div class="hedden card tinggi-custom" >
-            <img src="/images/kaos.jpg" class="carrds card-img-top object-fit-fill " style="height: 350px;" alt="Produk">
-            <div class="card-body">
-              <p class="text-muted">Old El Paso</p>
-              <h6 class="card-title">Retro Cat-Eye Sunglasses</h6>
-              <div class="text-warning mb-2">★★★★☆ (9 reviews)</div>
-              <p class="fw-bold">$149.00</p>
-            </div>
-          </div>
-        </div>
+       
         
 
         <!-- Produk lainnya ... -->
@@ -349,7 +412,7 @@
                   <img src="images/kaos.jpg" class="d-block w-100 h-100 object-fit-fill" alt="Image 1">
                 </div>
                 <div class="carousel-item h-100">
-                  <img src="images/brosur.jpg" class="d-block w-100 h-100 object-fit-fill alt="Image 2">
+                  <img src="images/brosur.jpg" class="d-block w-100 h-100 object-fit-fill" alt="Image 2">
                 </div>
                 <div class="carousel-item h-100">
                   <img src="images/img3.jpg" class="d-block w-100 h-100 object-fit-contain" alt="Image 3">
@@ -486,6 +549,67 @@
       });
     </script>
      <!-- produk grid -->
+
+     <!-- range slider -->
+      <script>
+const minRange = document.getElementById('minRange');
+const maxRange = document.getElementById('maxRange');
+const minPrice = document.getElementById('minPrice');
+const maxPrice = document.getElementById('maxPrice');
+const track = document.querySelector('.slider-track');
+
+function formatUSD(value) {
+  return '$' + parseFloat(value).toLocaleString(undefined, { minimumFractionDigits: 2 });
+}
+
+function updateTrack() {
+  let minVal = parseInt(minRange.value);
+  let maxVal = parseInt(maxRange.value);
+
+  if (maxVal < minVal) {
+    [minVal, maxVal] = [maxVal, minVal];
+  }
+
+  const percentMin = (minVal / 2471) * 100;
+  const percentMax = (maxVal / 2471) * 100;
+
+  track.style.background = `linear-gradient(to right, #ccc ${percentMin}%, #7c1d3f ${percentMin}%, #7c1d3f ${percentMax}%, #ccc ${percentMax}%)`;
+
+  minPrice.textContent = formatUSD(minVal);
+  maxPrice.textContent = formatUSD(maxVal);
+}
+
+// Mencegah overlap antar slider
+minRange.addEventListener('input', () => {
+  if (parseInt(minRange.value) > parseInt(maxRange.value) - 1) {
+    minRange.value = maxRange.value - 1;
+  }
+  updateTrack();
+});
+
+maxRange.addEventListener('input', () => {
+  if (parseInt(maxRange.value) < parseInt(minRange.value) + 1) {
+    maxRange.value = parseInt(minRange.value) + 1;
+  }
+  updateTrack();
+});
+
+updateTrack();
+</script>
+
+
+     <!-- range slider -->
+
+     <script>
+const colorOptions = document.querySelectorAll('.color-option');
+
+colorOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    option.classList.toggle('active');
+  });
+});
+</script>
+
     <!-- script Produk List -->
     <script src="js/component.js"></script>
     <script src="js/wishlist.js"></script>
